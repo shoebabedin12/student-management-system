@@ -40,7 +40,7 @@ const SeeNotice = () => {
         };
     });
     return (
-        <div style={{ marginTop: '50px', marginRight: '20px' }}>
+        <div style={{ margin: "0 auto" , width: "100%"}} >
             {loading ? (
                 <div style={{ fontSize: '20px' }}>Loading...</div>
             ) : response ? (

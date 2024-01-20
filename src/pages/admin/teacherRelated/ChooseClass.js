@@ -59,7 +59,7 @@ const ChooseClass = ({ situation }) => {
                 :
                 <>
                     {getresponse ?
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '16px' }}>
                             <Button variant="contained" onClick={() => navigate("/Admin/addclass")}>
                                 Add Class
                             </Button>
