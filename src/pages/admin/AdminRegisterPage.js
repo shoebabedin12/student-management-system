@@ -1,15 +1,15 @@
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Box, Checkbox, CircularProgress, CssBaseline, FormControlLabel, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Grid, Box, Typography, Paper, Checkbox, FormControlLabel, TextField, CssBaseline, IconButton, InputAdornment, CircularProgress} from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-import bgpic from "../../assets/designlogin.jpg"
+import { Link, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+import bgpic from "../../assets/designlogin.jpg";
+import Popup from '../../components/Popup';
 import { LightPurpleButton } from '../../components/buttonStyles';
 import { registerUser } from '../../redux/userRelated/userHandle';
-import styled from 'styled-components';
-import Popup from '../../components/Popup';
 
 const defaultTheme = createTheme();
 
@@ -91,7 +91,7 @@ const AdminRegisterPage = () => {
                         <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
                             Admin Register
                         </Typography>
-                        <Typography variant="h7">
+                        <Typography variant="h7" textAlign={'center'}>
                             Create your own school by registering as an admin.
                             <br />
                             You will be able to add students and faculty and

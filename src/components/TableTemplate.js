@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { StyledTableCell, StyledTableRow } from './styles';
 import { Table, TableBody, TableContainer, TableHead, TablePagination } from '@mui/material';
+import React, { useState } from 'react';
+import { StyledTableCell, StyledTableRow } from './styles';
 
 const TableTemplate = ({ buttonHaver: ButtonHaver, columns, rows }) => {
     const [page, setPage] = useState(0);
@@ -60,7 +60,7 @@ const TableTemplate = ({ buttonHaver: ButtonHaver, columns, rows }) => {
                 page={page}
                 onPageChange={(event, newPage) => setPage(newPage)}
                 onRowsPerPageChange={(event) => {
-                    setRowsPerPage(parseInt(event.target.value, 5));
+                    setRowsPerPage(parseInt(event.target.value, 10));
                     setPage(0);
                 }}
             />

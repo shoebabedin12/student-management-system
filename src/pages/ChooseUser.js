@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { AccountCircle, Group, School } from '@mui/icons-material';
 import {
+  Backdrop,
+  Box,
+  CircularProgress,
+  Container,
   Grid,
   Paper,
-  Box,
-  Container,
-  CircularProgress,
-  Backdrop,
 } from '@mui/material';
-import { AccountCircle, School, Group } from '@mui/icons-material';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../redux/userRelated/userHandle';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import Popup from '../components/Popup';
+import { loginUser } from '../redux/userRelated/userHandle';
 
 const ChooseUser = ({ visitor }) => {
   const dispatch = useDispatch()
@@ -142,10 +142,11 @@ const ChooseUser = ({ visitor }) => {
 export default ChooseUser;
 
 const StyledContainer = styled.div`
-  background: linear-gradient(to bottom, #411d70, #19118b);
-  height: 120vh;
+  ${'' /* background: linear-gradient(to bottom, #411d70, #19118b); */}
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
 `;
 
@@ -155,10 +156,12 @@ const StyledPaper = styled(Paper)`
   background-color: #1f1f38;
   color:rgba(255, 255, 255, 0.6);
   cursor:pointer;
+  transition: all linear 0.3s;
 
   &:hover {
-    background-color: #2c2c6c;
+    background-color: #151B77;
     color:white;
+    transition: all linear 0.3s;
   }
 `;
 
